@@ -17,10 +17,10 @@ export const StateContextProvider = ({ children }) => {
       method: 'GET',
       headers: {
         'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-        'X-RapidAPI-Key': '8d8a1e7778msh23af0ecfed5ce9fp1947f4jsna304592e1733'
+        'X-RapidAPI-Key': process.env.PUBLIC_RAPID_API_KEY
       },
     });
-
+    
     const data = await res.json();
     
     console.log(data)
